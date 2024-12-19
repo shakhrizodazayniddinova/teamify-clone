@@ -9,4 +9,6 @@ export const teamMembers = [
     { name: 'John Garcia' },
     { name: 'Michael Johnson' },
     { name: 'James Garcia' },
-]
+];
+
+// export default teamMembers;

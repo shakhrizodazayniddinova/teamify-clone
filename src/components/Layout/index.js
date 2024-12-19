@@ -1,9 +1,9 @@
 import React from 'react';
 import { useRouter } from 'next/router';
 import Header from '../../pages/header';
+import { sidebarData } from './sidebardata';
 import { useThemeMode } from "@/context/themeContext";
 import { List, ListItem, ListItemIcon, ListItemText, Typography, Box, CssBaseline } from "@mui/material";
-import { sidebarData } from './sidebardata';
 
 export default function index({children}) {
   const router = useRouter();

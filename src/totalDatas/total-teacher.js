@@ -4,4 +4,6 @@ export const teamMembers = [
   { name: 'Eva' },
   { name: 'Frank' },
   { name: 'Ivan' },
-  ];
+];
+
+// export default teamMembers;

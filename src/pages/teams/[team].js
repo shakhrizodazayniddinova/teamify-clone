@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
 import Layout from '../../components/Layout';
 import { Box, List, Typography } from '@mui/material';
+// import f from ''
 
 export default function Home() {
   const router = useRouter();
@@ -11,7 +12,7 @@ export default function Home() {
 
   useEffect(() => {
     if (team) {
-      import(`./data/${team}`)
+      import(`../../totalDatas/${team}`)
         .then((module) => {
           setMembers(module.teamMembers || []);
         })

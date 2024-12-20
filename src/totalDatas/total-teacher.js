@@ -1,4 +1,4 @@
-export const teamMembers = [
+const teamMembers = [
   { name: 'Alice' },
   { name: 'Charlie' },
   { name: 'Eva' },
@@ -6,4 +6,4 @@ export const teamMembers = [
   { name: 'Ivan' },
 ];
 
-// export default teamMembers;
+export default teamMembers;

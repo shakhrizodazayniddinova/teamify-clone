@@ -2,10 +2,10 @@ import React, { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
 import { Box, List, ListItem, Typography } from '@mui/material';
 import Layout from '../../components/Layout';
-import totalStudents from '../../totalDatas/total-students';
-import totalTeacher from '../../totalDatas/total-teacher';
-import totalCourses from '../../totalDatas/total-courses';
-import totalRoom from '../../totalDatas/total-room';
+import totalStudents from '../../datas/totalDatas/total-students';
+import totalTeacher from '../../datas/totalDatas/total-teacher';
+import totalCourses from '../../datas/totalDatas/total-courses';
+import totalRoom from '../../datas/totalDatas/total-room';
 
 export default function Home() {
   const router = useRouter();
@@ -15,15 +15,13 @@ export default function Home() {
 
   useEffect(() => {
     if (!router.isReady) return;
-    
-    console.log('team:', team);
 
     if (team === 'total-students') setMembers(totalStudents);
     else if(team === 'total-teacher') setMembers(totalTeacher);
     else if(team === 'total-courses') setMembers(totalCourses);
     else if(team === 'total-room') setMembers(totalRoom);
     else setError(true);
-    
+
   }, [router.isReady, team]);
 
   return (

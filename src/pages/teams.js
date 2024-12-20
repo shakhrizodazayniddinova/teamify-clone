@@ -3,7 +3,7 @@ import Layout from '../components/Layout';
 import Title from './title';
 import { Box, Card, Grid, Typography } from '@mui/material';
 import { useRouter } from 'next/router';
-import { teamsData } from './teamsdata';
+import teamsData from '../datas/teamsData/teamsdata';
 import { useThemeMode } from '@/context/themeContext';
 
 export default function teams() {

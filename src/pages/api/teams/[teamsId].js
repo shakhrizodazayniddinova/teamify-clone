@@ -16,6 +16,7 @@ export default function handler(req, res){
               return res.status(200).json(totalCourses);
             case 'total-room':
               return res.status(200).json(totalRoom);
+              
             default:
               return res.status(404).json({ message: 'Team not found' });
         }

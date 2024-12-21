@@ -4,7 +4,7 @@ import totalTeacher from '../src/datas/totalDatas/total-teacher';
 import totalCourses from '../src/datas/totalDatas/total-courses';
 import totalRoom from '../src/datas/totalDatas/total-room';
 
-const baseUrl = 'http://localhost:3000/api';
+const baseUrl = 'https://teamify-by-shakhrizoda.netlify.app/api';
 
 const getTeams = async () => {
     try {

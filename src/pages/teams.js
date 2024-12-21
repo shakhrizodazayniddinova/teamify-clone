@@ -5,6 +5,7 @@ import Layout from '../components/Layout';
 import { useThemeMode } from '@/context/themeContext';
 import Title from './title';
 import { getTeams } from '../../api/api';
+import { iconMap } from '@/datas/teamsData/teamsdata';
 
 export default function teams({teamsData}) {
   const router = useRouter();
@@ -41,7 +42,9 @@ export default function teams({teamsData}) {
                 "&:hover":{boxShadow: '0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1)'}}}>
 
                 <Box sx={{width: '70px', height: '70px', bgcolor: item.iconBg, justifyContent: 'center', display: 'flex', alignItems: 'center', clipPath: 'polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)', borderRadius: '15px'}}>
-                  <Typography sx={{fontSize: '25px', height: '30px', color: 'white'}}>{item.icon}</Typography>
+                  <Typography sx={{fontSize: '25px', height: '30px', color: 'white'}}>
+                    {item.icon}
+                  </Typography>
                 </Box>
 
                 <Typography fontWeight={'500'} color={mode === 'dark' && 'black'}>{item.label}</Typography>

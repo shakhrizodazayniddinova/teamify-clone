@@ -4,10 +4,42 @@ import { faBoxOpen, faPersonChalkboard } from '@fortawesome/free-solid-svg-icons
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const teamsData = [
-  {id: 1, icon: <SchoolOutlinedIcon fontSize='30px' />, label: 'Total Student', usernum: '1220', path: 'total-students', iconBg: '#6C5CE7', bgcolor: '#F4F4F8'},
-  {id: 2, icon: <FontAwesomeIcon icon={faPersonChalkboard} />, label: 'Total Teacher', usernum: '120', path: 'total-teacher', iconBg: '#FF7675', bgcolor: '#FFF0F3'},
-  {id: 3, icon: <AutoStoriesOutlinedIcon fontSize='30px' />, label: 'Total Courses', usernum: '15', path: 'total-courses', iconBg: '#74B9FF', bgcolor: '#F0F7FF'},
-  {id: 4, icon: <FontAwesomeIcon icon={faBoxOpen} />, label: 'Faculty Room', usernum: '100', path: 'total-room', iconBg: '#FDCB6E', bgcolor: '#FFF7E6'},
+  {
+    id: 1, 
+    path: 'total-students', 
+    label: 'Total Student', 
+    icon: () => <SchoolOutlinedIcon fontSize='30px' />, 
+    usernum: '1220', 
+    iconBg: '#6C5CE7', 
+    bgcolor: '#F4F4F8'
+  },
+  {
+    id: 2, 
+    path: 'total-teacher', 
+    label: 'Total Teacher', 
+    icon: () => <FontAwesomeIcon icon={faPersonChalkboard} />, 
+    usernum: '120', 
+    iconBg: '#FF7675', 
+    bgcolor: '#FFF0F3'
+  },
+  {
+    id: 3, 
+    path: 'total-courses', 
+    label: 'Total Courses', 
+    icon: () => <AutoStoriesOutlinedIcon fontSize='30px' />, 
+    usernum: '15', 
+    iconBg: '#74B9FF', 
+    bgcolor: '#F0F7FF'
+  },
+  {
+    id: 4, 
+    path: 'total-room', 
+    label: 'Faculty Room', 
+    icon: () => <FontAwesomeIcon icon={faBoxOpen} />, 
+    usernum: '100', 
+    iconBg: '#FDCB6E', 
+    bgcolor: '#FFF7E6'
+  },
 ];
 
 export default teamsData;

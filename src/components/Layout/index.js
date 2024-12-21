@@ -32,22 +32,17 @@ export default function index({children}) {
                 <Box sx={{width: '100%'}} onClick={() => router.push(item.path)}>
                   <ListItem button key={item.path} sx={{display: 'flex', alignItems: 'center', gap: '15px', cursor: 'pointer', p: 0, height: '45px', 
                     color: isActive ? '#6956E5' : '',
-                    
                     "&:hover": { 
                       bgcolor: "transparent", 
                       "& .MuiListItemIcon-root": { color: "#6956E5" }, 
                       "& .MuiTypography-root": { color: "#6956E5" } 
                     }}}>
+
                     <ListItemIcon sx={{ color: isActive ? '#6956E5' : "gray", minWidth: '24px' }}>{item.icon}</ListItemIcon>
                     <ListItemText primary={item.text} />
+
                     {isActive && (
-                        <Typography
-                          sx={{
-                            display: 'block',
-                            color: '#6956E5',
-                            fontSize: '30px',
-                          }}
-                        >
+                        <Typography sx={{ display: 'block', color: '#6956E5', fontSize: '30px' }}>
                           •
                         </Typography>
                       )}

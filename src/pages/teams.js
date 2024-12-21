@@ -1,14 +1,32 @@
-import React from 'react';
-import Layout from '../components/Layout';
-import Title from './title';
-import { Box, Card, Grid, Typography } from '@mui/material';
+import React, { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
-import teamsData from '../datas/teamsData/teamsdata';
+import { Box, Card, Grid, Typography } from '@mui/material';
+import Layout from '../components/Layout';
 import { useThemeMode } from '@/context/themeContext';
+import Title from './title';
+import { getTeams } from '../../api/api';
 
-export default function teams() {
+export default function teams({teamsData}) {
   const router = useRouter();
   const {mode} = useThemeMode();
+
+  console.log(teamsData);
+  
+
+  // const [teamsData, setTeamsData] = useState([]);
+
+  // useEffect(() => {
+  //   const fetchTeams = async () => {
+  //     try {
+  //       const res = await getTeams();
+  //       setTeamsData(res)
+  //     } catch (error) {
+  //       console.log("Error fetching teams data:", error);
+  //     }
+  //   }
+
+  //   fetchTeams();
+  // }, []);
 
   return (
     <Layout>
@@ -35,4 +53,12 @@ export default function teams() {
       </Box>
     </Layout>
   )
+}
+
+export async function getStaticProps(context) {
+  const res = await getTeams();
+  
+  return {
+    props: { teamsData: res }, 
+  };
 }
